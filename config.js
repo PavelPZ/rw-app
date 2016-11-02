@@ -6,6 +6,12 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
+  //bundles: {
+  //  "app.js": [
+  //    "app/index.js",
+  //    "github:pavelPZ/rw-login@master/lib/index.js"
+  //  ]
+  //},
 
   map: {
     "classnames": "npm:classnames@2.2.5",
