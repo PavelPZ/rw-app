@@ -1,0 +1,19 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "es5",
+    "module": "system",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "baseUrl": ".",
+    "paths": {
+      "rw-login/lib/*": [ "jspm_packages/github/pavelPZ/rw-login@master/typings/rw-login/*" ]
+    },
+    "jsx": "react"
+  },
+  "exclude": [
+    "jspm_packages"
+  ]
+}

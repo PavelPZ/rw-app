@@ -1,0 +1,12 @@
+{
+  "name": "rw-app",
+  "version": "1.0.0",
+  "jspm": {
+    "dependencies": {
+      "classnames": "npm:classnames@^2.2.5",
+      "react": "npm:react@^15.3.2",
+      "react-dom": "npm:react-dom@^15.3.2",
+      "rw-login": "github:pavelPZ/rw-login@master"
+    }
+  }
+}
