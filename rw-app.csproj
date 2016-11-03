@@ -40,11 +40,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="src\index.ts" />
+    <TypeScriptCompile Include="index.tsx" />
     <TypeScriptCompile Include="typings\classnames\classnames.d.ts" />
     <TypeScriptCompile Include="typings\react\react-dom.d.ts" />
     <TypeScriptCompile Include="typings\react\react.d.ts" />
     <TypeScriptCompile Include="typings\tsd.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\rw-login\rw-login.csproj">
+      <Project>{3f048568-b392-4eab-83c9-cadfbee16e18}</Project>
+      <Name>rw-login</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>

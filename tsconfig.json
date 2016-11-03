@@ -12,7 +12,7 @@
     "baseUrl": ".",
     "paths": {
       "rxjs/*": [ "jspm_packages/npm/rxjs@5.0.0-rc.1/*" ],
-      "rw-login/*": [ "jspm_packages/github/PavelPZ/rw-login@master/typings/*" ]
+      "rw-login/*": [ "jspm_packages/github/PavelPZ/rw-login@master/tsd/*" ]
     },
     "lib": [
       "dom",
@@ -23,6 +23,6 @@
 
   "exclude": [
     "jspm_packages/",
-    "typings/src/**/*"
+    "tsd/**/*"
   ]
 }
