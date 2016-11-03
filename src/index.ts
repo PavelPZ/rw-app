@@ -1,8 +1,8 @@
-﻿import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
-import { map } from 'rxjs/operator/map';
-Observable.of(1, 2, 3).map(x => x + '!!!');
+﻿import { about as loginAbout } from 'rw-login/src/index';
+import test from 'rw-login/src/test/index';
 
 export function about(): string {
-  return 'about rw-app';
+  return `login: ${loginAbout()}, app: about rw-app, loginTest: ${test()}`;
 }
+
+alert(about());

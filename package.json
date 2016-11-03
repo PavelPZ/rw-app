@@ -1,12 +1,14 @@
 {
+  "name": "rw-app",
+  "version": "1.0.0",
   "jspm": {
-    "name": "rw-app",
     "main": "src/index",
     "dependencies": {
       "classnames": "npm:classnames@^2.2.5",
       "core-js": "npm:core-js@^2.4.1",
       "react-dom": "npm:react-dom@^15.3.2",
-      "rxjs": "npm:rxjs@^5.0.0-rc.1"
+      "rxjs": "npm:rxjs@^5.0.0-rc.1",
+      "rw-login": "local:rw-login@1.0.2"
     },
     "peerDependencies": {
       "assert": "npm:jspm-nodelibs-assert@^0.2.0",
@@ -48,4 +50,3 @@
     }
   }
 }
-
