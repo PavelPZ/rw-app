@@ -7,13 +7,21 @@
     "experimentalDecorators": true,
     "inlineSourceMap": true,
     "inlineSources": true,
+    "declaration": true,
+    //"declarationDir": "typings/rw-app",
     "baseUrl": ".",
     "paths": {
-      "rw-login/lib/*": [ "jspm_packages/github/pavelPZ/rw-login@master/typings/rw-login/*" ]
+      "rxjs/*": [ "jspm_packages/npm/rxjs@5.0.0-rc.1/*" ]
     },
+    "lib": [
+      "dom",
+      "es6"
+    ],
     "jsx": "react"
   },
+
   "exclude": [
-    "jspm_packages"
+    "jspm_packages/",
+    "typings/rw-app/**/*"
   ]
 }

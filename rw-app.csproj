@@ -3,7 +3,7 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <ProjectGuid>{DE3CC79A-50C6-4F26-A769-3687DBA6F289}</ProjectGuid>
+    <ProjectGuid>{E5339388-DF60-48A3-889A-C6C070C9CFAB}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <OutputPath>bin</OutputPath>
@@ -23,14 +23,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="config.js" />
     <Content Include="index.html" />
+    <Content Include="jspm.config.js" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="package.json" />
     <Content Include="tsconfig.json" />
     <Content Include="tsd.json" />
-    <Content Include="package.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -39,16 +39,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app\index.ts" />
+    <TypeScriptCompile Include="src\index.ts" />
     <TypeScriptCompile Include="typings\classnames\classnames.d.ts" />
     <TypeScriptCompile Include="typings\react\react-dom.d.ts" />
     <TypeScriptCompile Include="typings\react\react.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>rw_app</RootNamespace>
+    <RootNamespace>lib_template</RootNamespace>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
@@ -58,9 +59,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>49893</DevelopmentServerPort>
+          <DevelopmentServerPort>52556</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49893/</IISUrl>
+          <IISUrl>http://localhost:52556/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
