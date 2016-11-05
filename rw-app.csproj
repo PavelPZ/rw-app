@@ -24,6 +24,7 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <Content Include="index.html" />
+    <Content Include="jspm.browser.js" />
     <Content Include="jspm.config.js" />
     <Content Include="web.config" />
   </ItemGroup>
@@ -31,7 +32,7 @@
     <Content Include="package.json" />
     <Content Include="tsconfig.json" />
     <Content Include="tsd.json" />
-    <Content Include="updateLocals.cmd" />
+    <Content Include="commands.cmd" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

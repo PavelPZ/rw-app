@@ -12,9 +12,6 @@ SystemJS.config({
       "github:": "jspm_packages/github/",
       "local:": "jspm_packages/local/"
     }
-  },
-  map: {
-    "dist": "local:dist@master"
   }
 });
 
@@ -43,6 +40,7 @@ SystemJS.config({
     "process": "npm:jspm-nodelibs-process@0.2.0",
     "react": "npm:react@15.3.2",
     "react-dom": "npm:react-dom@15.3.2",
+    "rw-lib": "local:rw-lib@1.0.0",
     "rw-login": "local:rw-login@1.0.2",
     "rxjs": "npm:rxjs@5.0.0-rc.1",
     "stream": "npm:jspm-nodelibs-stream@0.2.0",
@@ -113,7 +111,7 @@ SystemJS.config({
     },
     "npm:jspm-nodelibs-http@0.2.0": {
       "map": {
-        "http-browserify": "npm:stream-http@2.4.1"
+        "http-browserify": "npm:stream-http@2.5.0"
       }
     },
     "npm:jspm-nodelibs-stream@0.2.0": {
@@ -151,15 +149,6 @@ SystemJS.config({
       "map": {
         "pako": "npm:pako@0.2.9",
         "readable-stream": "npm:readable-stream@2.1.5"
-      }
-    },
-    "npm:stream-http@2.4.1": {
-      "map": {
-        "inherits": "npm:inherits@2.0.3",
-        "builtin-status-codes": "npm:builtin-status-codes@2.0.0",
-        "xtend": "npm:xtend@4.0.1",
-        "readable-stream": "npm:readable-stream@2.1.5",
-        "to-arraybuffer": "npm:to-arraybuffer@1.0.1"
       }
     },
     "npm:stream-browserify@2.0.1": {
@@ -349,7 +338,25 @@ SystemJS.config({
         "rxjs": "npm:rxjs@5.0.0-rc.1",
         "core-js": "npm:core-js@2.4.1",
         "classnames": "npm:classnames@2.2.5",
-        "react-dom": "npm:react-dom@15.3.2"
+        "react-dom": "npm:react-dom@15.3.2",
+        "rw-lib": "local:rw-lib@1.0.0"
+      }
+    },
+    "local:rw-lib@1.0.0": {
+      "map": {
+        "core-js": "npm:core-js@2.4.1",
+        "rxjs": "npm:rxjs@5.0.0-rc.1",
+        "react-dom": "npm:react-dom@15.3.2",
+        "classnames": "npm:classnames@2.2.5"
+      }
+    },
+    "npm:stream-http@2.5.0": {
+      "map": {
+        "builtin-status-codes": "npm:builtin-status-codes@2.0.0",
+        "xtend": "npm:xtend@4.0.1",
+        "readable-stream": "npm:readable-stream@2.1.5",
+        "to-arraybuffer": "npm:to-arraybuffer@1.0.1",
+        "inherits": "npm:inherits@2.0.3"
       }
     }
   }
