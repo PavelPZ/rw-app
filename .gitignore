@@ -254,7 +254,7 @@ paket-files/
 jspm_packages/
 typings/
 
-app/**/*.js
-
 app.js
 *.map
+
+*.js
