@@ -7,7 +7,13 @@
 
 
 <script>
-  System.import('index.js');
+  System.import('index.js').then(function (m) { m.init(); });
+  //System.import('globalize-runtime').then(function (m) {
+  //  Globalize = m;
+  //  System.import('glob/en.js', 'glob/cs.js').then(function (m) {
+  //    System.import('index.js');
+  //  })
+  //});
 </script>
 <body>
   <div id="content"></div>

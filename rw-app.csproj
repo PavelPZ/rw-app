@@ -24,7 +24,7 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <Content Include="index.html" />
-    <Content Include="jspm.browser.js" />
+    <Content Include="jspm.config-versions.js" />
     <Content Include="jspm.config.js" />
     <Content Include="web.config" />
   </ItemGroup>
@@ -43,6 +43,8 @@
   <ItemGroup>
     <TypeScriptCompile Include="index.tsx" />
     <TypeScriptCompile Include="typings\classnames\classnames.d.ts" />
+    <TypeScriptCompile Include="typings\cldr.js\cldr.js.d.ts" />
+    <TypeScriptCompile Include="typings\globalize\globalize.d.ts" />
     <TypeScriptCompile Include="typings\react\react-dom.d.ts" />
     <TypeScriptCompile Include="typings\react\react.d.ts" />
     <TypeScriptCompile Include="typings\tsd.d.ts" />
