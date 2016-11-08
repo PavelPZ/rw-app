@@ -50,9 +50,9 @@
     <TypeScriptCompile Include="typings\tsd.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\rw-login\rw-login.csproj">
-      <Project>{3f048568-b392-4eab-83c9-cadfbee16e18}</Project>
-      <Name>rw-login</Name>
+    <ProjectReference Include="..\rw-lib\rw-lib.csproj">
+      <Project>{7d74022d-e8c2-4912-b8ce-f22e84d9cdbf}</Project>
+      <Name>rw-lib</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -1,15 +1,14 @@
 SystemJS.config({
-
   browserConfig: {
-    production: true,
-    paths: {
+    "production": true,
+    "paths": {
       "npm:react@15.3.2": "jspm_packages/npm/react@15.3.2/dist/react.min.js",
       "npm:react-dom@15.3.2": "jspm_packages/npm/react-dom@15.3.2/dist/react-dom.min.js",
       "npm:": "/jspm_packages/npm/",
       "github:": "/jspm_packages/github/",
       "local:": "/jspm_packages/local/",
       "globalize-runtime": "/jspm_packages/npm/globalize@1.1.1/dist/globalize-runtime.js",
-      "globalize-runtime/*": "/jspm_packages/npm/globalize@1.1.1/dist/globalize-runtime/*",
+      "globalize-runtime/": "/jspm_packages/npm/globalize@1.1.1/dist/globalize-runtime/"
     }
   },
   nodeConfig: {
@@ -19,17 +18,15 @@ SystemJS.config({
       "local:": "jspm_packages/local/"
     }
   },
-
   production: true,
-  "paths": {
+  paths: {
     "globalize-runtime": "/jspm_packages/npm/globalize@1.1.1/dist/globalize-runtime.js",
-    "globalize-runtime/*": "/jspm_packages/npm/globalize@1.1.1/dist/globalize-runtime/*",
     "globalize-runtime/number": "/jspm_packages/npm/globalize@1.1.1/dist/globalize-runtime/number.js",
     "globalize-runtime/date": "/jspm_packages/npm/globalize@1.1.1/dist/globalize-runtime/date.js",
     "globalize-runtime/plural": "/jspm_packages/npm/globalize@1.1.1/dist/globalize-runtime/plural.js",
     "globalize-runtime/relative-time": "/jspm_packages/npm/globalize@1.1.1/dist/globalize-runtime/relative-time.js",
+    "globalize-runtime/": "/jspm_packages/npm/globalize@1.1.1/dist/globalize-runtime/"
   }
-
 });
 
 SystemJS.config({
@@ -55,7 +52,7 @@ SystemJS.config({
     "ecc-jsbn": "npm:ecc-jsbn@0.1.1",
     "events": "npm:jspm-nodelibs-events@0.2.0",
     "fs": "npm:jspm-nodelibs-fs@0.2.0",
-    "globalize": "npm:globalize@1.1.1",
+    "globalize": "npm:globalize@1.1.2",
     "http": "npm:jspm-nodelibs-http@0.2.0",
     "https": "npm:jspm-nodelibs-https@0.2.1",
     "jodid25519": "npm:jodid25519@1.0.2",
@@ -69,7 +66,7 @@ SystemJS.config({
     "react-dom": "npm:react-dom@15.3.2",
     "rw-lib": "local:rw-lib@1.0.0",
     "rw-login": "local:rw-login@1.0.2",
-    "rxjs": "npm:rxjs@5.0.0-rc.1",
+    "rxjs": "npm:rxjs@5.0.0-rc.2",
     "stream": "npm:jspm-nodelibs-stream@0.2.0",
     "string_decoder": "npm:jspm-nodelibs-string_decoder@0.2.0",
     "tls": "npm:jspm-nodelibs-tls@0.2.0",
@@ -81,11 +78,6 @@ SystemJS.config({
     "zlib": "npm:jspm-nodelibs-zlib@0.2.0"
   },
   packages: {
-    "npm:rxjs@5.0.0-rc.1": {
-      "map": {
-        "symbol-observable": "npm:symbol-observable@1.0.4"
-      }
-    },
     "npm:react@15.3.2": {
       "map": {
         "fbjs": "npm:fbjs@0.8.5",
@@ -136,7 +128,7 @@ SystemJS.config({
         "immutable": "npm:immutable@3.8.1",
         "isomorphic-fetch": "npm:isomorphic-fetch@2.2.1",
         "promise": "npm:promise@7.1.1",
-        "ua-parser-js": "npm:ua-parser-js@0.7.10"
+        "ua-parser-js": "npm:ua-parser-js@0.7.11"
       }
     },
     "npm:jspm-nodelibs-http@0.2.0": {
@@ -304,7 +296,7 @@ SystemJS.config({
         "create-hash": "npm:create-hash@1.1.2",
         "evp_bytestokey": "npm:evp_bytestokey@1.0.0",
         "pbkdf2": "npm:pbkdf2@3.0.9",
-        "asn1.js": "npm:asn1.js@4.8.1"
+        "asn1.js": "npm:asn1.js@4.9.0"
       }
     },
     "npm:browserify-aes@1.0.6": {
@@ -340,13 +332,6 @@ SystemJS.config({
         "is-stream": "npm:is-stream@1.1.0"
       }
     },
-    "npm:asn1.js@4.8.1": {
-      "map": {
-        "bn.js": "npm:bn.js@4.11.6",
-        "inherits": "npm:inherits@2.0.3",
-        "minimalistic-assert": "npm:minimalistic-assert@1.0.0"
-      }
-    },
     "npm:hash.js@1.0.3": {
       "map": {
         "inherits": "npm:inherits@2.0.3"
@@ -365,19 +350,22 @@ SystemJS.config({
     },
     "local:rw-login@1.0.2": {
       "map": {
-        "rxjs": "npm:rxjs@5.0.0-rc.1",
+        "rxjs": "npm:rxjs@5.0.0-rc.2",
         "core-js": "npm:core-js@2.4.1",
         "classnames": "npm:classnames@2.2.5",
         "react-dom": "npm:react-dom@15.3.2",
-        "rw-lib": "local:rw-lib@1.0.0"
+        "rw-lib": "local:rw-lib@1.0.0",
+        "rw-login": "local:rw-login@1.0.2",
+        "globalize": "npm:globalize@1.1.2"
       }
     },
     "local:rw-lib@1.0.0": {
       "map": {
         "core-js": "npm:core-js@2.4.1",
-        "rxjs": "npm:rxjs@5.0.0-rc.1",
+        "rxjs": "npm:rxjs@5.0.0-rc.2",
         "react-dom": "npm:react-dom@15.3.2",
-        "classnames": "npm:classnames@2.2.5"
+        "classnames": "npm:classnames@2.2.5",
+        "globalize": "npm:globalize@1.1.2"
       }
     },
     "npm:stream-http@2.5.0": {
@@ -387,11 +375,6 @@ SystemJS.config({
         "readable-stream": "npm:readable-stream@2.1.5",
         "to-arraybuffer": "npm:to-arraybuffer@1.0.1",
         "inherits": "npm:inherits@2.0.3"
-      }
-    },
-    "npm:globalize@1.1.1": {
-      "map": {
-        "cldrjs": "npm:cldrjs@0.4.4"
       }
     },
     "npm:cldr-data@30.0.1": {
@@ -683,6 +666,23 @@ SystemJS.config({
     "npm:async@2.1.2": {
       "map": {
         "lodash": "npm:lodash@4.16.6"
+      }
+    },
+    "npm:globalize@1.1.2": {
+      "map": {
+        "cldrjs": "npm:cldrjs@0.4.7"
+      }
+    },
+    "npm:rxjs@5.0.0-rc.2": {
+      "map": {
+        "symbol-observable": "npm:symbol-observable@1.0.4"
+      }
+    },
+    "npm:asn1.js@4.9.0": {
+      "map": {
+        "bn.js": "npm:bn.js@4.11.6",
+        "inherits": "npm:inherits@2.0.3",
+        "minimalistic-assert": "npm:minimalistic-assert@1.0.0"
       }
     }
   }
