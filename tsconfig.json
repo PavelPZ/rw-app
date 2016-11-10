@@ -12,7 +12,7 @@
     "baseUrl": ".",
     "paths": {
       "rxjs/*": [ "jspm_packages/npm/rxjs@5.0.0-rc.2/*" ],
-      "rw-login/*": [ "jspm_packages/local/rw-login@1.0.2/tsd/*" ],
+      //"rw-login/*": [ "jspm_packages/local/rw-login@1.0.2/tsd/*" ],
       "rw-lib/*": [ "jspm_packages/local/rw-lib@1.0.0/tsd/*" ]
     },
     "lib": [

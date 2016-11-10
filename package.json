@@ -10,7 +10,6 @@
       "react-dom": "npm:react-dom@^15.3.2",
       "rxjs": "npm:rxjs@^5.0.0-rc.2",
       "rw-lib": "local:rw-lib@1.0.0"
-      //"rw-login": "local:rw-login@1.0.2"
     },
     "peerDependencies": {
       "assert": "npm:jspm-nodelibs-assert@^0.2.0",

@@ -3,7 +3,10 @@ import loginTest from 'rw-login/test/index';
 import { about as libTest } from 'rw-lib/index';
 import { setCookie, getCookie, remove } from 'rw-lib/lib/cookie';
 import allLocs from 'rw-lib/glob/all-locs';
-import { globalize, globalizeInit } from 'rw-lib/glob/globalize';  
+import { globalize, globalizeInit } from 'rw-lib/glob/globalize';   
+
+//import * as router from '../rw-lib/navig/router-model';
+import 'rw-lib/navig/router-model';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -72,4 +75,4 @@ console.log(globalize.relWeek(2));
 
 
 
-ReactDOM.render(<div>{about()}{loginTest()}</div>, document.getElementById('content'));
+//ReactDOM.render(<div>{about()}{loginTest()}</div>, document.getElementById('content'));
