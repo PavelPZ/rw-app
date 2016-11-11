@@ -27,6 +27,7 @@
     <Content Include="jspm.config-versions.js" />
     <Content Include="jspm.config.js" />
     <Content Include="web.config" />
+    <Content Include="web.config.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="package.json" />
@@ -42,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="index.tsx" />
+    <TypeScriptCompile Include="tests\login\test.ts" />
     <TypeScriptCompile Include="tests\navig\router.tsx" />
     <TypeScriptCompile Include="typings\classnames\classnames.d.ts" />
     <TypeScriptCompile Include="typings\cldr.js\cldr.js.d.ts" />
@@ -49,6 +51,7 @@
     <TypeScriptCompile Include="typings\react\react-dom.d.ts" />
     <TypeScriptCompile Include="typings\react\react.d.ts" />
     <TypeScriptCompile Include="typings\tsd.d.ts" />
+    <TypeScriptCompile Include="web.config.ts" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\rw-lib\rw-lib.csproj">

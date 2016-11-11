@@ -1,9 +1,13 @@
 ﻿import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { IRouteNode, RouteComponent, TRouteHandler, initRouteDispatcher, RouteHook } from 'rw-lib/navig/dispatcher';
+import { IRouteNode, RouteComponent, TRouteHandler, init as navigInit, RouteHook } from 'rw-lib/navig/dispatcher';
 import { navigate } from 'rw-lib/navig/router';
 //import 'rw-lib/navig/url-parser';
+
+export function init() {
+  navigInit<ITestNode>(initUrl);
+}
 
 interface ITestNode extends IRouteNode {
   state: number;
@@ -28,7 +32,8 @@ class Test extends RouteComponent<ITestNode> {
 let cnt = 0;
 class TestHandler extends TRouteHandler {
   eq(node1: ITestNode, node2: ITestNode): boolean { return node1.state == node2.state; }
-  getComponentClass(node: IRouteNode): React.ComponentClass<ITestNode> { return Test; }
+  getComponentClass(node: ITestNode): React.ComponentClass<ITestNode> { return Test; }
+  loginNeeded(node: ITestNode): boolean { return node.state==1; }
   normalizeStringProps(node: ITestNode) {
     if (node.state && typeof node.state == 'string') node.state = parseInt(node.state as any);
   }
@@ -57,8 +62,6 @@ let url2: ITestNode = {
   child: { handlerId: 'test', state: 22 },
   childs: { child1: { handlerId: 'test', state: 21 } },
 };
-
-initRouteDispatcher<ITestNode>(initUrl);
 
 setTimeout(() => {
   navigate<ITestNode>(url1);

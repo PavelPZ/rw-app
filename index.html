@@ -8,7 +8,9 @@
 
 <script>
   //System.import('index.js').then(function (m) { m.init(); });
-  System.import('tests/navig/router.js');
+  System.import('web.config.js');
+  System.import('tests/navig/router.js').then(m => m.init());
+  //System.import('tests/login/test.js').then(m => m.init());
 
   //System.import('globalize-runtime').then(function (m) {
   //  Globalize = m;
