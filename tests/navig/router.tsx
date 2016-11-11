@@ -1,8 +1,9 @@
 ﻿import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { IRouteNode, RouteComponent, TRouteHandler, acceptRoute, initRouteModule, RouteHook } from 'rw-lib/navig/router';
-import 'rw-lib/navig/url-parser';
+import { IRouteNode, RouteComponent, TRouteHandler, initRouteDispatcher, RouteHook } from 'rw-lib/navig/dispatcher';
+import { navigate } from 'rw-lib/navig/router';
+//import 'rw-lib/navig/url-parser';
 
 interface ITestNode extends IRouteNode {
   state: number;
@@ -26,16 +27,21 @@ class Test extends RouteComponent<ITestNode> {
 }
 let cnt = 0;
 class TestHandler extends TRouteHandler {
-  eq(node1: ITestNode, node2: ITestNode): boolean { if (!super.eq(node1, node2)) return false; return node1.state == node2.state; }
+  eq(node1: ITestNode, node2: ITestNode): boolean { return node1.state == node2.state; }
   getComponentClass(node: IRouteNode): React.ComponentClass<ITestNode> { return Test; }
+  normalizeStringProps(node: ITestNode) {
+    if (node.state && typeof node.state == 'string') node.state = parseInt(node.state as any);
+  }
 }
 TRouteHandler.register(new TestHandler('test'));
 
-let initUrl: ITestNode = {
-  handlerId: 'test',
-  state: 0,
-  child: { handlerId: 'test', state: 10 },
-  childs: { child1: { handlerId: 'test', state: 11 } },
+let initUrl: () => ITestNode = () => {
+  return {
+    handlerId: 'test',
+    state: 0,
+    child: { handlerId: 'test', state: 10 },
+    childs: { child1: { handlerId: 'test', state: 11 } },
+  };
 };
 
 let url1: ITestNode = {
@@ -52,11 +58,11 @@ let url2: ITestNode = {
   childs: { child1: { handlerId: 'test', state: 21 } },
 };
 
-initRouteModule<ITestNode>(initUrl);
+initRouteDispatcher<ITestNode>(initUrl);
 
 setTimeout(() => {
-  acceptRoute<ITestNode>(url1);
+  navigate<ITestNode>(url1);
   setTimeout(() => {
-    acceptRoute<ITestNode>(url2);
+    navigate<ITestNode>(url2);
   }, 1000);
 }, 1000);
