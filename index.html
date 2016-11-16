@@ -1,4 +1,9 @@
 ﻿<!doctype html>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+<link href="styles/toolbox.css" rel="stylesheet">
+
 <script src="jspm_packages/npm/core-js@2.4.1/client/shim.min.js"></script>
 <script src="jspm_packages/system.src.js"></script>
 <script src="jspm.config.js"></script>
@@ -10,7 +15,12 @@
   //System.import('index.js').then(function (m) { m.init(); });
   System.import('web.config.js');
 
-  System.import('rw-lib/navig/test.js').then(m => m.init());
+  System.import('index.js').then(function (m) { m.init(); });
+
+  //System.import('rw-lib/login/client/config.js');
+  //System.import('rw-lib/login/test.js').then(function (m) { m.init();});
+
+  //System.import('rw-lib/navig/test.js').then(function (m) { m.init(); });
 
   //System.import('globalize-runtime').then(function (m) {
   //  Globalize = m;

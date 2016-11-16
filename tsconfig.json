@@ -13,7 +13,8 @@
     "paths": {
       "rxjs/*": [ "jspm_packages/npm/rxjs@5.0.0-rc.2/*" ],
       //"rw-login/*": [ "jspm_packages/local/rw-login@1.0.2/tsd/*" ],
-      "rw-lib/*": [ "jspm_packages/local/rw-lib@1.0.0/tsd/*" ]
+      "rw-lib/*": [ "jspm_packages/local/rw-lib@1.0.0/tsd/*" ],
+      "react-toolbox/*": [ "jspm_packages/npm/react-toolbox@1.2.5/*" ]
     },
     "lib": [
       "dom",

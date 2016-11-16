@@ -4,10 +4,9 @@
   "jspm": {
     "main": "src/index",
     "dependencies": {
-      "classnames": "npm:classnames@^2.2.5",
       "core-js": "npm:core-js@^2.4.1",
       "globalize": "npm:globalize@^1.1.2",
-      "react-dom": "npm:react-dom@^15.3.2",
+      "react-toolbox": "npm:react-toolbox@^1.2.5",
       "rxjs": "npm:rxjs@^5.0.0-rc.2",
       "rw-lib": "local:rw-lib@1.0.0"
     },
@@ -16,6 +15,7 @@
       "bcrypt-pbkdf": "npm:bcrypt-pbkdf@^1.0.0",
       "buffer": "npm:jspm-nodelibs-buffer@^0.2.0",
       "child_process": "npm:jspm-nodelibs-child_process@^0.2.0",
+      "classnames": "npm:classnames@^2.2.5",
       "cldr-data": "npm:cldr-data@^30.0.1",
       "constants": "npm:jspm-nodelibs-constants@^0.2.0",
       "crypto": "npm:jspm-nodelibs-crypto@^0.2.0",
@@ -27,6 +27,7 @@
       "fs": "npm:jspm-nodelibs-fs@^0.2.0",
       "http": "npm:jspm-nodelibs-http@^0.2.0",
       "https": "npm:jspm-nodelibs-https@^0.2.0",
+      "immutability-helper": "npm:immutability-helper@2.0",
       "jodid25519": "npm:jodid25519@^1.0.0",
       "jsbn": "npm:jsbn@0.1",
       "net": "npm:jspm-nodelibs-net@^0.2.0",
@@ -35,6 +36,8 @@
       "process": "npm:jspm-nodelibs-process@^0.2.0",
       "querystring": "npm:jspm-nodelibs-querystring@^0.2.0",
       "react": "npm:react@^15.3.2",
+      "react-addons-css-transition-group": "npm:react-addons-css-transition-group@15.3",
+      "react-dom": "npm:react-dom@^15.3.2",
       "stream": "npm:jspm-nodelibs-stream@^0.2.0",
       "string_decoder": "npm:jspm-nodelibs-string_decoder@^0.2.0",
       "tls": "npm:jspm-nodelibs-tls@^0.2.0",

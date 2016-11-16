@@ -4,9 +4,10 @@ import { about as libTest } from 'rw-lib/index';
 import { setCookie, getCookie, remove } from 'rw-lib/lib/cookie';
 import allLocs from 'rw-lib/glob/all-locs';
 import { globalize, globalizeInit } from 'rw-lib/glob/globalize';   
+import { Button } from "react-toolbox/lib/button/index";
 
 //import * as router from '../rw-lib/navig/router-model';
-import 'rw-lib/navig/router-model';
+//import 'rw-lib/navig/router-model';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -26,11 +27,11 @@ import ReactDOM from 'react-dom';
 //console.log(dt);
 
 
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/observable/from';
-const example = Observable.from([1, 2, 3, 4, 5]).map(val => val + 10);
-const subscribe = example.subscribe(val => console.log(val));
+//import { Observable } from 'rxjs/Observable';
+//import 'rxjs/add/operator/map';
+//import 'rxjs/add/observable/from';
+//const example = Observable.from([1, 2, 3, 4, 5]).map(val => val + 10);
+//const subscribe = example.subscribe(val => console.log(val));
 
 export function about(): string {
   return `lib: ${libTest()}, login: ${loginAbout()}, app: about rw-app`;
@@ -48,27 +49,29 @@ export function about(): string {
 //  });
 //}
 
-export function init() { }
+export function init() {
+  ReactDOM.render(<Button primary raised>Text</Button>, document.getElementById('content'));
+}
 
-allLocs();
-globalizeInit('cs');
-console.log(globalize.dateFull(new Date()));
-console.log(globalize.percent1_1(10 / 3));
-console.log(globalize.relDay(1));
-console.log(globalize.relYear(-1));
-console.log(globalize.relWeek(2));
-globalizeInit('de');
-console.log(globalize.dateFull(new Date()));
-console.log(globalize.percent1_1(10 / 3));
-console.log(globalize.relDay(1));
-console.log(globalize.relYear(-1));
-console.log(globalize.relWeek(2));
-globalizeInit('en');
-console.log(globalize.dateFull(new Date()));
-console.log(globalize.percent1_1(10 / 3));
-console.log(globalize.relDay(1));
-console.log(globalize.relYear(-1));
-console.log(globalize.relWeek(2));
+//allLocs();
+//globalizeInit('cs');
+//console.log(globalize.dateFull(new Date()));
+//console.log(globalize.percent1_1(10 / 3));
+//console.log(globalize.relDay(1));
+//console.log(globalize.relYear(-1));
+//console.log(globalize.relWeek(2));
+//globalizeInit('de');
+//console.log(globalize.dateFull(new Date()));
+//console.log(globalize.percent1_1(10 / 3));
+//console.log(globalize.relDay(1));
+//console.log(globalize.relYear(-1));
+//console.log(globalize.relWeek(2));
+//globalizeInit('en');
+//console.log(globalize.dateFull(new Date()));
+//console.log(globalize.percent1_1(10 / 3));
+//console.log(globalize.relDay(1));
+//console.log(globalize.relYear(-1));
+//console.log(globalize.relWeek(2));
 
 //console.log(new Globalize("cs").dateFormatter({ date: "full" })(new Date()));
 //console.log(new Globalize("en").dateFormatter({ date: "full" })(new Date()));
