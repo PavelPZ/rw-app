@@ -26,6 +26,7 @@
     <Content Include="index.html" />
     <Content Include="jspm.config-versions.js" />
     <Content Include="jspm.config.js" />
+    <Content Include="styles\toolbox.css" />
     <Content Include="web.config" />
     <Content Include="web.config.js" />
   </ItemGroup>

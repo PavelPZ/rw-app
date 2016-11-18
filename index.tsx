@@ -2,8 +2,8 @@
 import loginTest from 'rw-login/test/index';
 import { about as libTest } from 'rw-lib/index';
 import { setCookie, getCookie, remove } from 'rw-lib/lib/cookie';
-import allLocs from 'rw-lib/glob/all-locs';
-import { globalize, globalizeInit } from 'rw-lib/glob/globalize';   
+//import allLocs from 'rw-lib/glob/all-locs';
+import { globalizeInit } from 'rw-lib/glob/globalize';   
 import { Button } from "react-toolbox/lib/button/index";
 
 //import * as router from '../rw-lib/navig/router-model';
@@ -34,7 +34,7 @@ import ReactDOM from 'react-dom';
 //const subscribe = example.subscribe(val => console.log(val));
 
 export function about(): string {
-  return `lib: ${libTest()}, login: ${loginAbout()}, app: about rw-app`;
+  return `lib: ${libTest()}, login: ${loginAbout()}, app: about rw-app}`;
 }
 
 //declare var System: any;
@@ -50,7 +50,7 @@ export function about(): string {
 //}
 
 export function init() {
-  ReactDOM.render(<Button primary raised>Text</Button>, document.getElementById('content'));
+  globalizeInit().then(glob => ReactDOM.render(<Button primary raised>{glob.locale}: {glob.dateFull(new Date())}</Button>, document.getElementById('content')));
 }
 
 //allLocs();
